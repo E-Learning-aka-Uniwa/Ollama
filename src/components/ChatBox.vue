@@ -1,7 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ollama from 'ollama';
-
+const initialize = async () => {
+    const response = await ollama.chat({
+        model: 'phi3',
+        messages: [{ role: 'user', content: `You're going to act as a teacher. You can't break character in any case. You're going to answer questions as if you're a teacher, remember that.`
+         }]
+    });
+    console.log('Initialized');
+    console.log(response.message.content)
+}
+initialize()
 const chatInput = ref('Why is the sky blue?')
 const messages = ref([{ role: 'agent', content: 'Hello, I am kand7dev. How can I help you today?'}]);
 const currentOutputMessageContent = ref('')
@@ -21,7 +30,6 @@ const submitChat = async () => {
     messages.value.push({ role: 'agent', content: currentOutputMessageContent.value })
     currentOutputMessageContent.value = ''
     }
-
 </script>
 
 <template>
@@ -41,6 +49,10 @@ const submitChat = async () => {
         </div>
     </div>
 </template>
+
+<methods>
+
+</methods>
 
 <style scoped> 
 #chatBox {
