@@ -1,0 +1,15 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama:/root/ollama
+      - ./run-ollama.sh:/run-ollama.sh
+    pull_policy: always
+    tty: true
+    restart: always
+    entrypoint: ["/usr/bin/bash", "run-ollama.sh"]
+volumes:
+  ollama:
