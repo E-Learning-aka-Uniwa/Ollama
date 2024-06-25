@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ChatBox from "../components/ChatBox.vue";
+import ModelSelector from "../components/ModelSelector.vue";
 </script>
 
 <template>
@@ -7,6 +8,9 @@ import ChatBox from "../components/ChatBox.vue";
     <div class="flex-grid">
       <div class="main-col">
         <ChatBox></ChatBox>
+      </div>
+      <div class="right-col">
+        <ModelSelector/>
       </div>
     </div>
   </main>
@@ -20,6 +24,7 @@ import ChatBox from "../components/ChatBox.vue";
 }
 .main-col {
   width: 75%;
+  overflow-y: auto;
 }
 .right-col {
   width: 25%;
