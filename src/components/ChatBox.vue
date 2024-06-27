@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, toRefs } from "vue";
-import ollama from "ollama";
+import ollama from "ollama/browser";
 import ChatMessage from "./ChatMessage.vue";
 import { useModelStore } from "@/stores/model";
 

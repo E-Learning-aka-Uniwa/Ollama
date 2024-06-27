@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, toRefs } from "vue";
-import ollama, { type ListResponse } from "ollama";
+import ollama, { type ListResponse } from "ollama/browser";
 import { useModelStore } from "@/stores/model";
 
 const modelStore = useModelStore();
