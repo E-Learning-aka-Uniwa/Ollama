@@ -1,4 +1,4 @@
-# At-at-Education
+# AI-at-Education
 
 ## Project Breakdown
 This application is built using VueJS and Ollama backend. 
