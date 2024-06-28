@@ -19,7 +19,7 @@ services:
               count: all
               capabilities: [gpu]
   vueapp:
-    image: kand7dev99/kand7dev-projects:ollama-vuejs
+    image: kand7dev99/kand7dev-projects:ollama3-vuejs-nvidia
     container_name: vue-frontend
     ports:
       - 8080:8080
