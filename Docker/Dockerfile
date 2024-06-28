@@ -6,7 +6,7 @@ COPY ../package*.json /app
 
 RUN npm install -g http-server
 
-COPY . .
+COPY ../ .
 
 RUN npm run build
 
