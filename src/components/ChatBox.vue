@@ -51,8 +51,8 @@ async function initializeChat() {
   isFetching.value = false;
 }
 catch (error) {
-  console.log("Error initializing chat. Retrying in 10 seconds.");
-  setTimeout(initializeChat, 10000);
+  console.log("Error initializing chat. Retrying in 30 seconds.");
+  setTimeout(initializeChat, 30000);
 }
 }
 </script>
