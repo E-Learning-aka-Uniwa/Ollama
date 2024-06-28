@@ -7,8 +7,8 @@ pid=$!
 sleep 5
 
 
-echo "Retrieve phi3 model..."
-ollama pull phi3
+echo "Retrieve tinyllama model..."
+ollama pull tinyllama 
 echo "Done"
 
 wait $pid
