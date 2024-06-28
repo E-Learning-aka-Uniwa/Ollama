@@ -37,23 +37,22 @@ const submitChat = async () => {
 };
 
 async function initializeChat() {
-  try{
-  const response = await ollama.chat({
-    model: "phi3:latest",
-    messages: [
-      {
-        role: "user",
-        content: `You're a personal AI teacher. You can't break character. You're going to provide information about topics the user asks about. Start by introduction yourself.`,
-      },
-    ],
-  });
-  messages.value[0] = { role: "agent", content: response.message.content };
-  isFetching.value = false;
-}
-catch (error) {
-  console.log("Error initializing chat. Retrying in 30 seconds.");
-  setTimeout(initializeChat, 30000);
-}
+  try {
+    const response = await ollama.chat({
+      model: "phi3:latest",
+      messages: [
+        {
+          role: "user",
+          content: `You're a personal AI teacher. You can't break character. You're going to provide information about topics the user asks about. Start by introduction yourself.`,
+        },
+      ],
+    });
+    messages.value[0] = { role: "agent", content: response.message.content };
+    isFetching.value = false;
+  } catch (error) {
+    console.log("Error initializing chat. Retrying in 30 seconds.");
+    setTimeout(initializeChat, 30000);
+  }
 }
 </script>
 

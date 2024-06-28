@@ -17,12 +17,12 @@ const getModels = async () => {
 
 const data = ref<ListResponse | null>(null);
 
-async function fetchData(){
+async function fetchData() {
   try {
     const response = await getModels();
     data.value = response;
   } catch (error) {
-    console.log('Error fetching models. Retrying in 10 seconds.');
+    console.log("Error fetching models. Retrying in 10 seconds.");
     setTimeout(fetchData, 10000);
   }
 }
