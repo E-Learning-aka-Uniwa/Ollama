@@ -37,9 +37,9 @@ const submitChat = async () => {
 };
 
 async function initializeChat() {
-  try {
+  try{
   const response = await ollama.chat({
-    model: "tinyllama ",
+    model: "tinyllama:latest",
     messages: [
       {
         role: "user",
@@ -51,7 +51,7 @@ async function initializeChat() {
   isFetching.value = false;
 }
 catch (error) {
-  console.log("Error initializing chat. Model is not yet loaded. Retrying in 10 seconds.");
+  console.log("Error initializing chat. Retrying in 10 seconds.");
   setTimeout(initializeChat, 10000);
 }
 }
