@@ -1,39 +1,19 @@
-# ollama-interface
+# AI-at-Education
 
-This template should help get you started developing with Vue 3 in Vite.
+## Project Breakdown
+This application is built using VueJS and Ollama backend. 
 
-## Recommended IDE Setup
+- Frontend and backend are containerized
+- The user can use a single `docker-compose up` to run the application
+- The default model is `phi3:latest`
+- Users can pull other models using `docker exec ollama ollama pull <model-name>`
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Project Goal
+The goal of this project is to create a simple webpage where the user can interact with an LLM which runs locally on the machine.
+The model behaves as an AI tutor that can help understanding different concepts, such as:
+  1. Math
+  2. Programming
+  3. World facts
+  4. and more
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+The whole application is containerized, which means that the user don't have to install any dependencies on the machine.
