@@ -50,8 +50,8 @@ async function initializeChat() {
     messages.value[0] = { role: "agent", content: response.message.content };
     isFetching.value = false;
   } catch (error) {
-    console.log("Error initializing chat. Retrying in 15 seconds.");
-    setTimeout(initializeChat, 15000);
+    console.log("Error initializing chat. Retrying in 30 seconds.");
+    setTimeout(initializeChat, 30000);
   }
 }
 </script>
